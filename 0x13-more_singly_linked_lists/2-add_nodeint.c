@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * add_nodeint - a fuction that add a new node
+ * @head: a double pointer
+ * @n: a node
+ *
+ * Return: the address of the new element, or NULL if it failed
+ */
+listint_t *add_nodeint(listint_t **head, const int n)
+{
+	listint_t *new;
+		int count  = 0;
+
+		while (count)
+			count++;
+
+	new = malloc(sizeof(listint_t));
+		if (!new)
+		return (NULL);
+		new->n = (n);
+		new->next = (*head);
+		(*head) = new;
+
+		return (*head);
+}
